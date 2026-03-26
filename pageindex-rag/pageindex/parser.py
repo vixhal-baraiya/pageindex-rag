@@ -17,7 +17,7 @@ Text:
 {text[:8000]}"""
 
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-5.4",
         messages=[{"role": "user", "content": prompt}],
         max_tokens=3000,
         response_format={"type": "json_object"},
