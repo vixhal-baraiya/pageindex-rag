@@ -30,7 +30,7 @@ def ask(query: str) -> str:
     context = retrieve(query, tree)
 
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-5.4",
         messages=[{
             "role": "user",
             "content": f"Answer using only the context below.\n\nContext:\n{context}\n\nQuestion: {query}"
