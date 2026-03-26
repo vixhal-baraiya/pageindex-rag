@@ -35,7 +35,7 @@ def ask(query: str) -> str:
             "role": "user",
             "content": f"Answer using only the context below.\n\nContext:\n{context}\n\nQuestion: {query}"
         }],
-        max_tokens=500,
+        max_completion_tokens=500,
     )
     return response.choices[0].message.content.strip()
 
@@ -45,4 +45,4 @@ if __name__ == "__main__":
     build_index("document.md")
 
     # Then query it
-    print(ask("Your Question"))
+    print(ask("How does Python handle concurrency and the GIL?"))
